@@ -1,1 +1,8 @@
-/* Your styles goes here. */
+.app {
+	display: flex;
+	align-items: start;
+	justify-content: center;
+	gap: 32px;
+	margin: 32px;
+}
+

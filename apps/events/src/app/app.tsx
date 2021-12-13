@@ -1,12 +1,16 @@
+import React, { useState } from 'react';
 import styles from './app.module.css';
-import NxWelcome from './nx-welcome';
+import { EventList } from './components/eventList';
+import { mockEvents } from './data/mockEvents';
 
 export function App() {
+  const [events, setEvents] = useState(mockEvents);
+
   return (
-    <>
-      <NxWelcome title="events" />
-      <div />
-    </>
+    <div className={styles.app}>
+      <EventList events={events} title="Past events"/>
+      <EventList events={events} title="Future events"/>
+    </div>
   );
 }
 
