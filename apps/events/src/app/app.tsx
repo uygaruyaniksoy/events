@@ -6,10 +6,14 @@ import { mockEvents } from './data/mockEvents';
 export function App() {
   const [events, setEvents] = useState(mockEvents);
 
+  const now = Date.now();
+  const pastEvents = events.filter(({date}) => date < now)
+  const futureEvents = events.filter(({date}) => date >= now);
+
   return (
     <div className={styles.app}>
-      <EventList events={events} title="Past events"/>
-      <EventList events={events} title="Future events"/>
+      <EventList events={pastEvents} title="Past events"/>
+      <EventList events={futureEvents} title="Future events"/>
     </div>
   );
 }
