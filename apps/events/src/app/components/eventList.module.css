@@ -1,0 +1,9 @@
+.eventList {
+	background: white;
+	width: 640px;
+	margin: auto;
+}
+
+.collapsable > div {
+	padding: 16px;
+}
